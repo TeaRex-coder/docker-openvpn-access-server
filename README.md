@@ -22,7 +22,7 @@ Select the version matching your CPU architecture.
 
 ```bash
 git clone -b ubuntu22.04-x86 https://github.com/TeaRex-coder/docker-openvpn-access-server.git
-cd ovpnas-docker
+cd docker-openvpn-access-server
 ```
 
 Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/ubuntu22.04-x86)
@@ -34,7 +34,7 @@ Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access
 
 ```bash
 git clone -b ubuntu20.04-x86 https://github.com/TeaRex-coder/docker-openvpn-access-server.git
-cd ovpnas-docker
+cd docker-openvpn-access-server
 ```
 
 Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/ubuntu20.04-x86)
@@ -46,7 +46,8 @@ Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access
 
 ```bash
 git clone -b ubuntu18.04-x86 https://github.com/TeaRex-coder/docker-openvpn-access-server.git
-cd ovpnas-docker
+cd docker-openvpn-access-server
+
 ```
 
 Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/ubuntu18.04-x86)
@@ -58,7 +59,7 @@ Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access
 
 ```bash
 git clone -b ubuntu22.04-arm https://github.com/TeaRex-coder/docker-openvpn-access-server.git
-cd ovpnas-docker
+cd docker-openvpn-access-server
 ```
 
 Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/ubuntu22.04-arm)
@@ -70,7 +71,7 @@ Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access
 
 ```bash
 git clone -b ubuntu20.04-arm https://github.com/TeaRex-coder/docker-openvpn-access-server.git
-cd ovpnas-docker
+cd docker-openvpn-access-server
 ```
 
 Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/ubuntu20.04-arm)

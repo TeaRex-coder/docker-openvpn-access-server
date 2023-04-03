@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  ovpn-as:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ovpn-as:ubuntu22.04-arm
+    container_name: ovpn-as
+    ports:
+      - "1443:443"
+      - "943:943"
+      - "1194:1194/udp"
+    privileged: true
+    volumes:
+      - /path/to/host/data:/usr/local/openvpn_as

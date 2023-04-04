@@ -1,3 +1,22 @@
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/OpenVPN_logo.svg" width="512">
+</p>
+
+<h3 align="center">Running Open-VPN Access Server in a Docker Container</h3>
+
+<p align="center">
+  <img src="https://img.shields.io/github/stars/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+  <img src="https://img.shields.io/docker/stars/alexandreboutoille/ovpn-as?style=for-the-badge">
+  <img src="https://img.shields.io/docker/pulls/alexandreboutoille/ovpn-as?style=for-the-badge">
+  <img src="https://img.shields.io/github/languages/code-size/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+  <img src="https://img.shields.io/github/license/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+</p>
+
 # About This Project: Docker OpenVPN Access Server
 
 [LinuxServer.io's docker image](https://hub.docker.com/r/linuxserver/openvpn-as) to run OpenVPN Access Server was depreciated 2 years ago. I couldn't find a replacement so made my own! This image is built on top of Ubuntu (18.04. 20.04 & 22.04) and includes the latest version of OpenVPN Access Server with both x86 and ARM builds.
@@ -47,7 +66,6 @@ Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access
 ```bash
 git clone -b ubuntu18.04-x86 https://github.com/TeaRex-coder/docker-openvpn-access-server.git
 cd docker-openvpn-access-server
-
 ```
 
 Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/ubuntu18.04-x86)
@@ -77,3 +95,13 @@ cd docker-openvpn-access-server
 Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/ubuntu20.04-arm)
 
 </details>
+
+## Contributing
+
+Please read the [Contribution Guide](https://github.com/TeaRex-coder/docker-openvpn-access-server/blob/main/CONTRIBUTING.md) before submitting a Pull Request to this repo!
+
+## To-Do List
+
+- [ ] Update image when new version of OpenVPN Access Server is released
+- [ ] Build image with Debian 11 base image
+- [ ] Build image with Debian 10 base image

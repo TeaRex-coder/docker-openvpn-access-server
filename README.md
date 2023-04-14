@@ -19,7 +19,7 @@
 
 # About This Project: Docker OpenVPN Access Server
 
-[LinuxServer.io's docker image](https://hub.docker.com/r/linuxserver/openvpn-as) to run OpenVPN Access Server was depreciated 2 years ago. I couldn't find a replacement so made my own! This image is built on top of Ubuntu (18.04. 20.04 & 22.04) and includes the latest version of OpenVPN Access Server with both x86 and ARM builds.
+[LinuxServer.io's docker image](https://hub.docker.com/r/linuxserver/openvpn-as) to run OpenVPN Access Server was depreciated 2 years ago. I couldn't find a replacement so I made my own! This image is built on top of Ubuntu (18.04. 20.04 & 22.04) and includes the latest version of OpenVPN Access Server with both x86 and ARM builds.
 
 ## What is OpenVPN Access Server?
 
@@ -49,7 +49,7 @@ Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access
 </details>
 
 <details>
-  <summary>Ubuntu 20.04 x86 <b>Recommended</b> </summary>
+  <summary>Ubuntu 20.04 x86</summary>
 
 ```bash
 git clone -b ubuntu20.04-x86 https://github.com/TeaRex-coder/docker-openvpn-access-server.git
@@ -73,7 +73,7 @@ Follow instructions [here](https://github.com/TeaRex-coder/docker-openvpn-access
 </details>
 
 <details>
-  <summary>Ubuntu 22.04 ARM</summary>
+  <summary>Ubuntu 22.04 ARM <b>Recommended</b> </summary>
 
 ```bash
 git clone -b ubuntu22.04-arm https://github.com/TeaRex-coder/docker-openvpn-access-server.git

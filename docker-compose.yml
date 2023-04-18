@@ -12,5 +12,3 @@ services:
       - "943:943"
       - "1194:1194/udp"
     privileged: true
-    volumes:
-      - /path/to/host/data:/usr/local/openvpn_as

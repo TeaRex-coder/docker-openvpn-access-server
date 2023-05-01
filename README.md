@@ -1,56 +1,55 @@
-# Ubuntu 22.04 ARM
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/OpenVPN_logo.svg" width="512">
+</p>
 
-This verison uses a [Docker image](https://github.com/TeaRex-coder/docker-openvpn-access-server/blob/ubuntu22.04-arm/Dockerfile) with a base image of Ubuntu 22.04 for ARM CPU architectures.
+<h3 align="center">Running Open-VPN Access Server in a Docker Container</h3>
 
-## Installation
+<p align="center">
+  <img src="https://img.shields.io/github/stars/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+  <img src="https://img.shields.io/docker/stars/alexandreboutoille/ovpn-as?style=for-the-badge">
+  <img src="https://img.shields.io/docker/pulls/alexandreboutoille/ovpn-as?style=for-the-badge">
+  <img src="https://img.shields.io/github/languages/code-size/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+</p>
 
-### Clone repository
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+  <img src="https://img.shields.io/github/issues/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+  <img src="https://img.shields.io/github/license/TeaRex-coder/docker-openvpn-access-server?style=for-the-badge">
+</p>
 
-```bash
-git clone -b ubuntu22.04-arm https://github.com/TeaRex-coder/docker-openvpn-access-server.git
-cd docker-openvpn-access-server
-```
+# About This Project: Docker OpenVPN Access Server
 
-## Using Docker Hub Image
+[LinuxServer.io's docker image](https://hub.docker.com/r/linuxserver/openvpn-as) to run OpenVPN Access Server was depreciated 2 years ago. I couldn't find a replacement so I made my own! This image is built on top of Ubuntu (18.04. 20.04 & 22.04) and includes the latest version of OpenVPN Access Server with both x86 and ARM builds. However, I am still learning and this project should NOT be used in production. Plus I am still wroking out a few things!
 
-To use the Docker Hub image alexandreboutoille/ovpn-as, you can either edit the docker-compose file to use the new image or use the docker run command with the new image.
+## What is OpenVPN Access Server?
 
-**Edit Docker Compose**
-Update the `docker-compose.yml` file as follows:
+If you don't already know, OpenVPN Access Server is a powerful and easy-to-use VPN solution that allows you to securely connect remote users to your network. It supports a wide range of authentication methods, including username and password, two-factor authentication, and LDAP. It also provides a web-based management interface that makes it easy to configure and manage your VPN.
 
-```yaml
-version: "3.8"
+## Requirements
 
-services:
-  ovpn-as:
-    image: alexandreboutoille/ovpn-as:ubuntu22.04-arm
-    container_name: ovpn-as
-    ports:
-      - "1443:443"
-      - "943:943"
-      - "1194:1194/udp"
-    privileged: true
-    volumes:
-      - /path/to/host/data:/usr/local/openvpn_as
-```
+To use this Docker image, you'll need to have the following installed:
 
-The run:
-`docker compose up -d`
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install)
 
-**Or, using Docker Run**
+## Setup
 
-`docker run -d -p 1443:443 -p 943:943 -p 1194:1194/udp --privileged=true -v /path/to/host/data:/usr/local/openvpn_as --name ovpn-as alexandreboutoille/ovpn-as:ubuntu22.04-arm`
+Select the version matching your CPU architecture:
 
-### Manual install
+- [Ubuntu 22.04 x86 <b>Recommended</b>](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/main/ubuntu22.04-x86)
+- [Ubuntu 20.04 x86](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/main/ubuntu20.04-x86)
+- [Ubuntu 18.04 x86](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/main/ubuntu18.04-x86)
+- [Ubuntu 22.04 ARM <b>Recommended</b>](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/main/ubuntu22.04-arm)
+- [Ubuntu 20.04 ARM](https://github.com/TeaRex-coder/docker-openvpn-access-server/tree/main/ubuntu20.04-arm)
 
-Build image
+## Contributing
 
-`docker build -t ovpn-as:ubuntu22.04-arm .`
+Please read the [Contribution Guide](https://github.com/TeaRex-coder/docker-openvpn-access-server/blob/main/CONTRIBUTING.md) before submitting a Pull Request to this repo!
 
-Create Container
+## To-Do List
 
-`docker run -d -p 1443:443 -p 943:943 -p 1194:1194/udp --privileged=true -v /path/to/host/data:/usr/local/openvpn_as --name ovpn-as ovpn-as:ubuntu22.04-arm`
-
-**Or, build with Docker Compose**
-
-`docker compose up -d`
+- [ ] Add persistant volume
+- [ ] Easier authentication
+- [ ] Update image when new version of OpenVPN Access Server is released
+- [ ] Build image with Debian 11 base image
+- [ ] Build image with Debian 10 base image
